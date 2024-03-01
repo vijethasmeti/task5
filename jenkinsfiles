@@ -1,13 +1,13 @@
 pipeline{
-agent any
-tools{
-maven 'maven'
-}
+  agent any
+  tools{
+  maven 'maven'
+  }
 stages {
-stage('compile'){
-steps{
-sh 'mvn compile'
-}
+  stage('compile'){
+  steps{
+  sh 'mvn compile'
+  }
 }
 stage('test'){
 steps{
@@ -19,10 +19,11 @@ steps{
 sh 'mvn build'
 }
 }
-stage('package'){
-steps{
-sh 'mvn package'
+  stage('package'){
+  steps{
+  sh 'mvn package'
+  }
+  }
 }
 }
-}
-}
+
